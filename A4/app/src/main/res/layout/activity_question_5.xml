@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/fifth"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/titlename">
+            </include>
+
+
+            <TextView
+                android:id="@+id/Q5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/q5"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title" />
+
+            <ImageView
+                android:id="@+id/ima5"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="10"
+                android:src="@drawable/image5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/G5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ima5"
+                android:onClick="onCheckboxClicked">
+                <CheckBox
+                    android:id="@+id/Q5A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canada"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox
+                    android:id="@+id/Q5B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taiwan"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox
+                    android:id="@+id/Q5C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="South Africa"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox
+                    android:id="@+id/Q5D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="United Kingdom"
+                    android:onClick="onCheckboxClicked"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125dp"
+                android:clickable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fifth">
+
+                <Button
+                    android:id="@+id/previous_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/colorYellow"
+                    android:duplicateParentState="true"
+                    android:onClick="goPreviousPage"
+                    android:text="@string/previous_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/F_N"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="65dp"
+                    android:background="@color/colorYellow"
+                    android:duplicateParentState="true"
+                    android:onClick="goNextPage"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

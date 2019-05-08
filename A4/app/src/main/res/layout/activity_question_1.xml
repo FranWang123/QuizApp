@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_weight="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="20dp"
+                    android:text="Name: "/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/colorYellow"
+                    android:onClick="logOut"
+                    android:text="@string/logOut_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/Q1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/q1"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title" />
+
+            <ImageView
+                android:id="@+id/ima1"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="10"
+                android:src="@drawable/image1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/G1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:onClick="onRadioButtonClicked"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ima1">
+
+                <RadioButton
+                    android:id="@+id/Q1A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Canada" />
+
+                <RadioButton
+                    android:id="@+id/Q1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Taiwan" />
+
+                <RadioButton
+                    android:id="@+id/Q1C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="China" />
+
+                <RadioButton
+                    android:id="@+id/Q1D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Peru" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125dp"
+                android:clickable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first">
+
+                <Button
+                    android:id="@+id/previous_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/colorYellow"
+                    android:duplicateParentState="true"
+                    android:onClick="goPreviousPage"
+                    android:text="@string/previous_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/F_N"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="65dp"
+                    android:background="@color/colorYellow"
+                    android:duplicateParentState="true"
+                    android:onClick="goNextPage"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
